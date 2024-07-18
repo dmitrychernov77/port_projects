@@ -29,9 +29,7 @@ def summarize_text(input_text: str) -> str:
     # Send request to OpenAI
     promt = summary_prompt(input_text)
 
-    client = OpenAI(
-        api_key="sk-proj-p9LhmH9p2IOLX8FNE2SvT3BlbkFJaoF3FvhLMa2ztcBiD9I7"
-    )
+    client = OpenAI()
 
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
